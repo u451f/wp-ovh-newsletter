@@ -6,19 +6,19 @@ This will be executed once the subscriber has clicked our link in the confirmati
 Documentation: http://www.ovh.com/soapi/fr/?method=mailingListSubscriberAdd
 */
 function subscribe($email) {
+	$email = sanitize_email($email);
 	$options = get_option('ovh_newsletter_option_name');
     $MLname = $options['ml-name'];
     $domain = $options['ml-domain'];
     $MLuser = $options['ml-ovh-login'];
     $MLpass = $options['ml-ovh-password'];
     if (validEmail($email) === true) {
-        // le parametre email doit deja etre correctement echappé avant d'arriver ici !
         try {
             $soap = new SoapClient("https://www.ovh.com/soapi/soapi-re-1.44.wsdl");
             $session = $soap->login($MLuser, $MLpass, "fr", false);
             $soap->mailingListSubscriberAdd($session, $domain, $MLname, $email);
 			_e("Subscription successful.", 'ovh-newsletter');
-            sendAdminMail($email, "ok");
+            sendAdminMail($email, "Success");
             $soap->logout($session);
         } catch(SoapFault $fault) {
 			_e("Subscription failed.", 'ovh-newsletter');
