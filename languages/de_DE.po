@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-05-12 12:03+0200\n"
+"PO-Revision-Date: 2016-05-12 15:08+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: confirm.php\n"
+"X-Poedit-SearchPath-2: ovh_newsletter.php\n"
+"X-Poedit-SearchPath-3: process.js\n"
+"X-Poedit-SearchPath-4: process.php\n"
+
+#: confirm.php:20
+msgid "Subscription successful."
+msgstr "Abonnement erfolreich."
+
+#: confirm.php:24
+msgid "Subscription failed."
+msgstr "Abonnement nicht möglich."
+
+#: confirm.php:28
+msgid "Back to "
+msgstr "Zurück zu "
+
+#: confirm.php:39
+msgid "Error : This e-mail address appears to be incorrect."
+msgstr "Fehler: Diese E-Mail-Adresse erscheint fehlerhaft."
+
+#: ovh_newsletter.php:45
+msgid "New subscriber on "
+msgstr "Neuer Abonnent auf "
+
+#: ovh_newsletter.php:46
+msgid "Newsletter subscription from "
+msgstr "Neues Newsletter-Abonnement von "
+
+#: ovh_newsletter.php:48
+msgid "Success or Error: "
+msgstr "Erfolg oder Fehler: "
+
+#: ovh_newsletter.php:49
+msgid "IP: "
+msgstr "IP: "
+
+#: ovh_newsletter.php:65
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: ovh_newsletter.php:117
+msgid "Settings OVH Newsletter"
+msgstr "OVH Newsletter Parameter"
+
+#: ovh_newsletter.php:218
+msgid "Please fill in the corresponding fields."
+msgstr "Bitte füllen Sie alle Felder aus."
+
+#: process.php:21
+msgid "Newsletter subscription request"
+msgstr "Newsletterabonnement"
+
+#: process.php:80
+msgid "E-mail address required."
+msgstr "E-Mail-Adresse benötigt."
+
+#: process.php:83
+msgid "E-mail address invalid."
+msgstr "E-Mail-Adresse fehlerhaft."
+
+#: process.php:94
+msgid ""
+"Thank you for your subscription. You will receive a confirmation e-mail "
+"shortly."
+msgstr ""
+"Vielen Dank für Ihr Abonnement. Sie werden in Kürze eine "
+"Bestätigungsemail erhalten."
