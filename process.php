@@ -1,7 +1,7 @@
 <?php
-function sendConfirmationMail($email) {
-	require_once($_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php');
 
+function sendConfirmationMail($email) {
 	$email = sanitize_email($email);
 
 	$options = get_option('ovh_newsletter_option_name');
@@ -72,7 +72,7 @@ function validEmail($email) {
    }
    return $isValid;
 }
-// this file processes the data,s end an email and sends back JSON
+// this file processes the data, sends an email and then sends back JSON
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 // validate the variables ======================================================
@@ -91,8 +91,7 @@ if ( ! empty($errors)) {
 } else {
 	// show a message of success and provide a true success variable
 	$data['success'] = true;
-	//$data['message'] = _e('Thank you for your subscription. You will receive a confirmation e-mail shortly.', 'ovh-newsletter');
-	$data['message'] = 'Thank you for your subscription. You will receive a confirmation e-mail shortly.';
+	$data['message'] = __('Thank you for your subscription. You will receive a confirmation e-mail shortly.');
 	sendConfirmationMail($_POST['mail']);
 }
 // return all our data to an AJAX call
