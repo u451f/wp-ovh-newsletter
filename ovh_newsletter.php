@@ -3,7 +3,7 @@
 Plugin Name: OVH newsletter
 Description: Subscriptioni OVH newsletters
 Version: 0.1
-Author: Ulrike Uhlig
+Author: u
 Author URI: http://curlybracket.net
 License: GPL2
 */
@@ -50,7 +50,7 @@ function sendAdminMail($email, $returnValue) {
 	mail($to, $subject, $message, $headers);
 }
 
-/* Création d'un hash avec salt. */
+/* Create a hash using salt. */
 function create_hash($email) {
 	$options = get_option('ovh_newsletter_option_name');
     $salt = $options['ml-salt'];
@@ -62,7 +62,7 @@ function create_hash($email) {
 function ovh_newsletter_shortcode() {
 	$process = plugins_url('', __FILE__).'/process.php';
 	$form = '<form name="ovh_newsletter_form" class="form ovh-newsletter-form" method="post" autocomplete="on" action="'.$process.'">';
-		$form .= '<input class="form mail" name="mail" value="" type="email" placeholder="E-Mail" validate /><input type="submit" class="submit" name="subscribe" value="'.__("Subscribe", "ovh-newsletter").'" />';
+	$form .= '<input class="form mail" name="mail" value="" type="email" placeholder="E-Mail" validate /><input type="submit" class="submit" name="subscribe" value="'.__("Subscribe", "ovh-newsletter").'" />';
 	$form .= '</form>';
 	return $form;
 }
