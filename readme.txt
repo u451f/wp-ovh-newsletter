@@ -1,4 +1,4 @@
-=== OVH Newsletter subscription ===
+=== Subscription for OVH mailinglists ===
 Contributors: veganist
 Tags: email, newsletter, OVH
 Requires at least: 4.5
