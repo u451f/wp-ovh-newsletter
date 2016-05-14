@@ -23,7 +23,7 @@ As for now, the password is stored in cleartext in the database. This shall chan
 
 == Installation ==
 
-1. Unzip and upload `/ovh-newsletter/` to the `/wp-content/plugins/` directory
+1. Unzip and upload `/subscription-for-ovh-mailinglists/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Configure the list of email addresses in the settings menu
 
