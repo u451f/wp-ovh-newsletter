@@ -1,9 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php');
 
 function sendConfirmationMail($email) {
-	$email = sanitize_email($email);
-
 	$options = get_option('ovh_newsletter_option_name');
     $MLname = $options['ml-name'];
     $domain = $options['ml-domain'];
@@ -79,7 +79,7 @@ $data           = array();      // array to pass back data
 if (empty($_POST['mail'])) {
 	$errors['mail'] = __('E-mail address required.', 'ovh-newsletter');
 }
-if (!validEmail($_POST['mail'])) {
+if (!validEmail(sanitize_email($_POST['mail']))) {
 	$errors['mail'] = __('E-mail address invalid.', 'ovh-newsletter');
 }
 // return a response ===========================================================
@@ -92,7 +92,7 @@ if ( ! empty($errors)) {
 	// show a message of success and provide a true success variable
 	$data['success'] = true;
 	$data['message'] = __('Thank you for your subscription. You will receive a confirmation e-mail shortly.');
-	sendConfirmationMail($_POST['mail']);
+	sendConfirmationMail(sanitize_email($_POST['mail']));
 }
 // return all our data to an AJAX call
 echo json_encode($data);

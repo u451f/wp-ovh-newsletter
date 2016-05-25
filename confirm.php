@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php');
 /*
 @subscribe

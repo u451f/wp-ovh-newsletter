@@ -25,6 +25,8 @@ License: GPL2
 */
 ?>
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /* Plugin l10n */
 function ovh_newsletter_init() {
 	 $plugin_dir = basename(dirname(__FILE__));
